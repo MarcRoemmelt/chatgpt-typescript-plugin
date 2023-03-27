@@ -76,7 +76,6 @@
     "build:docker": "docker build -t chatgpt-typescript-plugin:$npm_package_version .",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "prepare": "husky install",
     "start": "nest start",
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch",
