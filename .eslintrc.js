@@ -7,6 +7,7 @@ module.exports = {
     'import',
     'simple-import-sort',
     'unused-imports',
+    'prettier',
   ],
   extends: [
     'eslint:recommended',
@@ -14,6 +15,8 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'prettier/prettier': 'error',
+
     'import/order': 0, // turn off in favor of eslint-plugin-simple-import-sort
     'import/no-unresolved': 0,
     'import/no-duplicates': 1,

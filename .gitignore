@@ -17,6 +17,9 @@ pnpm-debug.log*
 # Linter
 .eslintcache
 
+# Local Environment
+.env
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
