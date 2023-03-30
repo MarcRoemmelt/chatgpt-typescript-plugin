@@ -1,8 +1,5 @@
-import { join } from 'node:path';
-
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { ServeStaticModule } from '@nestjs/serve-static';
 
 import config from './app.config';
 import { AppController } from './app.controller';
@@ -14,15 +11,7 @@ import { ChunksService } from './services/chunks.service';
 import { OpenAiService } from './services/open-api.service';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({ load: [config] }),
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../..', 'assets'),
-      serveStaticOptions: {
-        index: false,
-      },
-    }),
-  ],
+  imports: [ConfigModule.forRoot({ load: [config] })],
   controllers: [AppController],
   providers: [
     AppService,

@@ -15,7 +15,6 @@
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.3.12",
     "@nestjs/platform-fastify": "^9.3.12",
-    "@nestjs/serve-static": "^3.0.1",
     "@nestjs/swagger": "^6.2.1",
     "@pinecone-database/pinecone": "^0.0.11",
     "fastify": "^4.15.0",

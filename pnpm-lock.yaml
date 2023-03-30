@@ -11,7 +11,6 @@ specifiers:
   '@nestjs/core': ^9.3.12
   '@nestjs/platform-fastify': ^9.3.12
   '@nestjs/schematics': ^9.0.4
-  '@nestjs/serve-static': ^3.0.1
   '@nestjs/swagger': ^6.2.1
   '@nestjs/testing': ^9.3.12
   '@pinecone-database/pinecone': ^0.0.11
@@ -55,7 +54,6 @@ dependencies:
   '@nestjs/config': 2.3.1_jy37pi22pqa22ux5geb72eebiu
   '@nestjs/core': 9.3.12_jy37pi22pqa22ux5geb72eebiu
   '@nestjs/platform-fastify': 9.3.12_r32u3wqalhdtn3fa6ggm56equa
-  '@nestjs/serve-static': 3.0.1_b6am6qk3mnypnfrfc4o6fsdeeq
   '@nestjs/swagger': 6.2.1_2e6shm63kwrdftptnyfyz4irla
   '@pinecone-database/pinecone': 0.0.11
   fastify: 4.15.0
@@ -1493,32 +1491,6 @@ packages:
     transitivePeerDependencies:
       - chokidar
     dev: true
-
-  /@nestjs/serve-static/3.0.1_b6am6qk3mnypnfrfc4o6fsdeeq:
-    resolution:
-      {
-        integrity: sha512-i766UJPYOqvQ2BbRKh0/+Mmq5NkJnmKcShjWV1i5qpXyeM0KDZTn0n7g7ykWq/3LbQgjpMzrhYtGv35GX7GVQw==,
-      }
-    peerDependencies:
-      '@fastify/static': ^6.5.0
-      '@nestjs/common': ^9.0.0
-      '@nestjs/core': ^9.0.0
-      express: ^4.18.1
-      fastify: ^4.7.0
-    peerDependenciesMeta:
-      '@fastify/static':
-        optional: true
-      express:
-        optional: true
-      fastify:
-        optional: true
-    dependencies:
-      '@fastify/static': 6.9.0
-      '@nestjs/common': 9.3.12_mnr6j2del53muneqly5h4y27ai
-      '@nestjs/core': 9.3.12_jy37pi22pqa22ux5geb72eebiu
-      fastify: 4.15.0
-      path-to-regexp: 0.2.5
-    dev: false
 
   /@nestjs/swagger/6.2.1_2e6shm63kwrdftptnyfyz4irla:
     resolution:
@@ -6344,13 +6316,6 @@ packages:
       lru-cache: 7.18.3
       minipass: 4.2.5
     dev: true
-
-  /path-to-regexp/0.2.5:
-    resolution:
-      {
-        integrity: sha512-l6qtdDPIkmAmzEO6egquYDfqQGPMRNGjYtrU13HAXb3YSRrt7HSb1sJY0pKp6o2bAa86tSB6iwaW2JbthPKr7Q==,
-      }
-    dev: false
 
   /path-to-regexp/3.2.0:
     resolution:

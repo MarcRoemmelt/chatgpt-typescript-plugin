@@ -4,6 +4,7 @@ import { NestFactory } from '@nestjs/core';
 import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { join } from 'path';
 
 import * as pkJSON from '../package.json';
 import { AppModule } from './app.module';
@@ -16,6 +17,7 @@ async function bootstrap() {
   useHelmet(app);
   useOpenApi(app);
   useCors(app);
+  app.useStaticAssets({ root: join(process.cwd(), './assets') });
   await app.listen(3333);
 }
 bootstrap();
