@@ -13,7 +13,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://{HOST}/api-yaml",
+    "url": "https://{HOST}/docs-yaml",
     "has_user_authentication": false
   },
   "logo_url": "https://{HOST}/logo.png",
