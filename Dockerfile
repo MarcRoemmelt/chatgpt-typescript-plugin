@@ -1,6 +1,6 @@
 #
 # ---- Base Node ----
-FROM node:18.14.2-alpine3.17 AS base
+FROM node:19.8.1-alpine3.17 AS base
 # set working directory
 WORKDIR /app
 # Update npm
