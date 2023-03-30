@@ -1,17 +1,28 @@
 import { Injectable } from '@nestjs/common';
 
 import { AppRepository } from '../app.repository';
+import { Document } from '../dtos/common.dto';
+import { DeleteRequest } from '../dtos/delete-request.dto';
 import { Query } from '../dtos/query-request.dto';
-import { OpenAiService } from './open-api.service';
+import { ChunksService } from './chunks.service';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly appRepository: AppRepository) {}
+  constructor(
+    private readonly repo: AppRepository,
+    private readonly chunksService: ChunksService,
+  ) {}
 
-  /**
-   * Query Repository
-   */
   async queryDB(queries: Query[]) {
-    return this.appRepository.queryDB(queries);
+    return this.repo.queryDB(queries);
+  }
+
+  async upsert(docs: Document[]) {
+    const chunks = await this.chunksService.getChunksForDocuments(docs);
+    return this.repo.upsert(chunks);
+  }
+
+  async delete(deleteRequest: DeleteRequest) {
+    return this.repo.delete(deleteRequest);
   }
 }

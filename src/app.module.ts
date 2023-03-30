@@ -10,6 +10,7 @@ import { AppRepository } from './app.repository';
 import { DataStore } from './data-store/data-store';
 import { PineconeDataStore } from './data-store/providers/pinecone.provider';
 import { AppService } from './services/app.service';
+import { ChunksService } from './services/chunks.service';
 import { OpenAiService } from './services/open-api.service';
 
 @Module({
@@ -27,6 +28,7 @@ import { OpenAiService } from './services/open-api.service';
     AppService,
     AppRepository,
     OpenAiService,
+    ChunksService,
     { provide: DataStore, useClass: PineconeDataStore },
   ],
 })

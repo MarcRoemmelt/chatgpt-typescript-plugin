@@ -5,7 +5,7 @@ import type { FastifyRequest } from 'fastify';
 import type { Observable } from 'rxjs';
 
 @Injectable()
-export class ChatGPTGuard implements CanActivate {
+export class AppGuard implements CanActivate {
   constructor(private readonly configService: ConfigService) {}
 
   canActivate(

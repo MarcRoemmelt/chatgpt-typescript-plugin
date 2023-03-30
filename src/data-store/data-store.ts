@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { Query } from 'src/dtos/query-request.dto';
-import { OpenAiService } from 'src/services/open-api.service';
 
+import { DocumentChunk } from '../dtos/common.dto';
+import { DeleteRequest } from '../dtos/delete-request.dto';
+import { Query } from '../dtos/query-request.dto';
+import { OpenAiService } from '../services/open-api.service';
 import { QueryWithEmbedding } from './data-store.types';
 
 @Injectable()
@@ -24,4 +26,18 @@ export abstract class DataStore {
   }
 
   abstract _query(queryWithEmbeddings: QueryWithEmbedding[]): Promise<any>;
+
+  public async upsert(chunks: { [documentId: string]: DocumentChunk[] }) {
+    return this._upsert(chunks);
+  }
+
+  abstract _upsert(chunks: {
+    [documentId: string]: DocumentChunk[];
+  }): Promise<any>;
+
+  public async delete(deleteRequest: DeleteRequest) {
+    return this._delete(deleteRequest);
+  }
+
+  abstract _delete(deleteRequest: DeleteRequest): Promise<any>;
 }

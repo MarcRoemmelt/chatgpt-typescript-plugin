@@ -11,8 +11,10 @@ import { ConfigService } from '@nestjs/config';
 import { ApiExcludeEndpoint } from '@nestjs/swagger';
 
 import * as aiPluginJSON from './ai-plugin.json';
-import { ChatGPTGuard } from './app.guard';
+import { AppGuard } from './app.guard';
+import { DeleteRequest, DeleteResponse } from './dtos/delete-request.dto';
 import { QueryRequest, QueryResponse } from './dtos/query-request.dto';
+import { UpsertRequest, UpsertResponse } from './dtos/upsert-request.dto';
 import { AppService } from './services/app.service';
 
 @Controller()
@@ -33,9 +35,25 @@ export class AppController {
    * Query the DB for text snippets
    */
   @HttpCode(HttpStatus.OK)
-  @UseGuards(ChatGPTGuard)
+  @UseGuards(AppGuard)
   @Get('query')
   async queryDb(@Body() body: QueryRequest): Promise<QueryResponse> {
     return this.appService.queryDB(body.queries);
+  }
+
+  @ApiExcludeEndpoint()
+  @HttpCode(HttpStatus.CREATED)
+  @UseGuards(AppGuard)
+  @Post('upsert')
+  async upsert(@Body() body: UpsertRequest): Promise<UpsertResponse> {
+    return this.appService.upsert(body.documents);
+  }
+
+  @ApiExcludeEndpoint()
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(AppGuard)
+  @Post('delete')
+  async delete(@Body() body: DeleteRequest): Promise<DeleteResponse> {
+    return this.appService.delete(body);
   }
 }
