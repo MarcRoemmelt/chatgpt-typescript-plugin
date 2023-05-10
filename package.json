@@ -16,7 +16,7 @@
     "@nestjs/core": "^9.3.12",
     "@nestjs/platform-fastify": "^9.3.12",
     "@nestjs/swagger": "^6.2.1",
-    "@pinecone-database/pinecone": "^0.0.12",
+    "@pinecone-database/pinecone": "^0.1.0",
     "fastify": "^4.15.0",
     "openai": "^3.2.1",
     "reflect-metadata": "^0.1.13",

@@ -29,8 +29,8 @@ dependencies:
     specifier: ^6.2.1
     version: 6.2.1(@fastify/static@6.9.0)(@nestjs/common@9.3.12)(@nestjs/core@9.3.12)(reflect-metadata@0.1.13)
   '@pinecone-database/pinecone':
-    specifier: ^0.0.12
-    version: 0.0.12
+    specifier: ^0.1.0
+    version: 0.1.4
   fastify:
     specifier: ^4.15.0
     version: 4.15.0
@@ -1233,8 +1233,8 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  /@pinecone-database/pinecone@0.0.12:
-    resolution: {integrity: sha512-YI9IQ7/0k6jI+NUyTD+I2BvwUGhOMRgMpx/qx/v5t5Cm31vSdnXEgGfh9jILUpi/+j59vtK+O5rB+pV5v1L15w==}
+  /@pinecone-database/pinecone@0.1.4:
+    resolution: {integrity: sha512-Dvez0BbkFz1mWU9aE1o02cbCGitjf66EQwW5DwszLK1DA1SUbyxYTGYKO3RtZIaf3K+U/AAOuo/KaIcq6NW8SQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       cross-fetch: 3.1.5
