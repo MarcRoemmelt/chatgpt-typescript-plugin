@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@dqbd/tiktoken':
     specifier: ^1.0.2
@@ -17,8 +21,8 @@ dependencies:
     specifier: ^9.3.12
     version: 9.3.12(reflect-metadata@0.1.13)(rxjs@7.8.0)
   '@nestjs/config':
-    specifier: ^2.3.1
-    version: 2.3.1(@nestjs/common@9.3.12)(reflect-metadata@0.1.13)(rxjs@7.8.0)
+    specifier: ^3.0.0
+    version: 3.0.0(@nestjs/common@9.3.12)(reflect-metadata@0.1.13)
   '@nestjs/core':
     specifier: ^9.3.12
     version: 9.3.12(@nestjs/common@9.3.12)(reflect-metadata@0.1.13)(rxjs@7.8.0)
@@ -56,7 +60,7 @@ devDependencies:
     version: 9.3.0
   '@nestjs/schematics':
     specifier: ^9.0.4
-    version: 9.0.4(chokidar@3.5.3)(typescript@4.9.5)
+    version: 9.0.4(typescript@5.0.2)
   '@nestjs/testing':
     specifier: ^9.3.12
     version: 9.3.12(@nestjs/common@9.3.12)(@nestjs/core@9.3.12)
@@ -1050,19 +1054,17 @@ packages:
       tslib: 2.5.0
       uid: 2.0.1
 
-  /@nestjs/config@2.3.1(@nestjs/common@9.3.12)(reflect-metadata@0.1.13)(rxjs@7.8.0):
-    resolution: {integrity: sha512-Ckzel0NZ9CWhNsLfE1hxfDuxJuEbhQvGxSlmZ1/X8awjRmAA/g3kT6M1+MO1SHj1wMtPyUfd9WpwkiqFbiwQgA==}
+  /@nestjs/config@3.0.0(@nestjs/common@9.3.12)(reflect-metadata@0.1.13):
+    resolution: {integrity: sha512-fzASk1Uv6AjdE6uA1na8zpqRCXAhRpcfgpCVv3SAKlgJ3VR3bEjcI4G17WHLgLBsmPzI1ofdkSI451WLD1F1Rw==}
     peerDependencies:
-      '@nestjs/common': ^7.0.0 || ^8.0.0 || ^9.0.0
+      '@nestjs/common': ^8.0.0 || ^9.0.0 || ^10.0.0
       reflect-metadata: ^0.1.13
-      rxjs: ^6.0.0 || ^7.2.0
     dependencies:
       '@nestjs/common': 9.3.12(reflect-metadata@0.1.13)(rxjs@7.8.0)
-      dotenv: 16.0.3
+      dotenv: 16.1.4
       dotenv-expand: 10.0.0
       lodash: 4.17.21
       reflect-metadata: 0.1.13
-      rxjs: 7.8.0
       uuid: 9.0.0
     dev: false
 
@@ -1151,6 +1153,21 @@ packages:
       jsonc-parser: 3.2.0
       pluralize: 8.0.0
       typescript: 4.9.5
+    transitivePeerDependencies:
+      - chokidar
+    dev: true
+
+  /@nestjs/schematics@9.0.4(typescript@5.0.2):
+    resolution: {integrity: sha512-egurCfAc4e5i1r2TmeAF0UrOKejFmT5oTdv4b7HcOVPupc3QGU7CbEfGleL3mkM5AjrixTQeMxU9bJ00ttAbGg==}
+    peerDependencies:
+      typescript: ^4.3.5
+    dependencies:
+      '@angular-devkit/core': 15.0.4(chokidar@3.5.3)
+      '@angular-devkit/schematics': 15.0.4(chokidar@3.5.3)
+      fs-extra: 11.1.0
+      jsonc-parser: 3.2.0
+      pluralize: 8.0.0
+      typescript: 5.0.2
     transitivePeerDependencies:
       - chokidar
     dev: true
@@ -2398,8 +2415,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /dotenv@16.0.3:
-    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+  /dotenv@16.1.4:
+    resolution: {integrity: sha512-m55RtE8AsPeJBpOIFKihEmqUcoVncQIwo7x9U8ZwLEZw9ZpXboz2c+rvog+jUaJvVrZ5kBOeYQBX5+8Aa/OZQw==}
     engines: {node: '>=12'}
     dev: false
 
