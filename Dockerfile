@@ -47,7 +47,7 @@ RUN /usr/local/bin/node-prune
 
 #
 # ---- Release ----
-FROM alpine:3.17
+FROM alpine:3.20
 # Install Nodejs (this setup results in significantly smaller image sizes)
 RUN apk add --update nodejs=18.14.2-r0
 
